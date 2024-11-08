@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { authService } from '../firebase';
 import AppRouter from './Routes';
+import { authService } from '../firebase';
 console.log(authService);
 
 function App() {
