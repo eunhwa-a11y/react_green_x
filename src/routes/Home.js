@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import { db } from "../firebase";
 import { collection, addDoc, serverTimestamp, query, where, getDocs } from "firebase/firestore";
 import ListGroup from 'react-bootstrap/ListGroup'; 
+import Comment from "../components/Comment";
 
 const Home = () => {
   const [comment, setComment] = useState(''); // 입력하는 글 정보 담기
@@ -70,9 +71,9 @@ const Home = () => {
       </Form>
       <hr />
       <ListGroup>
-        {comments.map(item =>
-           <ListGroup.Item>{item.comment}</ListGroup.Item>
-           )}
+      {comments.map(item=> 
+          <Comment commentObj={item}/>
+        )}
       </ListGroup>
     </div>
   )
