@@ -10,7 +10,7 @@ function App() {
   const [init, setInit] = useState(false); 
   const [userObj, setUserObj] = useState(null);
 
-  useEffect (() => {
+  useEffect(()=>{
     const auth = getAuth();
     // 회원 정보가 있는지 확인
     onAuthStateChanged(auth, (user) => {
@@ -18,6 +18,7 @@ function App() {
         // 유저 정보가 있다면
         setIsLoggedIn(true); // 로그인 돼 있어요!
         setUserObj(user.uid);
+        console.log(user.uid);
       } else {
         setIsLoggedIn(false);
       }
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <>
-      {init ? <AppRouter userObj={userObj} isLoggedIn = {isLoggedIn}/> : "Initializing..."}
+      {init ? <AppRouter userObj={userObj} isLoggedIn={isLoggedIn}/>: "Initializing..."}
     </>
   );
 }
