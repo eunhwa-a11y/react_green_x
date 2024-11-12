@@ -36,7 +36,6 @@ const Home = ({userObj})=>{
 
   }
 
-
   useEffect(()=>{
     getComments();
   },[]) //최소 렌더링후 실행, 변동시 실행

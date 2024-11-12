@@ -49,7 +49,7 @@ const Comment = ({commentObj, isOwener})=>{
             <Form.Group className="mb-3" controlId="comment">          
               <Form.Control type="text" value={comment} onChange={onChange} placeholder="글을 입력해주세요" />
             </Form.Group>
-            <div>
+            <div className='d-flex gap-1'>
               <Button variant="info" type="button" onClick={toggleEditMode}>취소</Button>
               <Button variant="success" type="submit">입력</Button>
             </div>
