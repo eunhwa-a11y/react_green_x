@@ -19,6 +19,7 @@ function App() {
         setIsLoggedIn(true); // 로그인 돼 있어요!
         setUserObj(user.uid);
         console.log(user.uid);
+        console.log(user);
       } else {
         setIsLoggedIn(false);
       }
