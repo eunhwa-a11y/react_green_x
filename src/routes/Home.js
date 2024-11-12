@@ -48,6 +48,7 @@ const Home = ({userObj})=>{
   }
   const onSubmit = async (e)=>{
     e.preventDefault();
+    // submit을 하면 user아이디를 랜덤으로 생성
     const storageRef = ref(storage, `${userObj}/${uuidv4()}`);
 
     uploadString(storageRef, attachment, 'data_url').then(async(snapshot) => {
