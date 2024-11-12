@@ -20,6 +20,12 @@ const Profile = ()=>{
   return(
     <div className='container'>
       <h1>Profile Page</h1>
+      <div className='profile'>
+        <img src={`${process.env.PUBLIC_URL}/profile_icon.svg`} alt="" />
+      </div>
+      <input type="file" className='hidden' accept="image/*" name='profile' id='profile' />
+      <Button variant="primary" type="button">프로필 이미지 변경</Button>
+      <hr />
       <Button variant="primary" onClick={onLogoutClick}>로그아웃</Button>
     </div>
   )
